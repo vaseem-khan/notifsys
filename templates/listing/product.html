@@ -5,15 +5,18 @@
     </head>
 
     <body>
-        <h1>{{ product_url }}</h1>
         {% if product %}
-            <h4>{{ product.title }}</h4> 
+            <h2>{{ product.title }}</h2> 
 
                     <img src="media/{{product.image}}" height="100" width="100"/> <br> 
                     Price : {{ product.price }}<br>
                     Description: {{ product.description }}<br>
-                    Time : {{ product.time }}
-            {% endif %}
+                    Time : {{ product.time }}<br>
+                    
+                    Posted by:<br>
+                    Name: {{product.owner.name}}<br>
+                    Email: {{product.owner.email}}
+            {% endif %} 
       
     </body>
 </html>
